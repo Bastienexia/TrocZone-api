@@ -2,7 +2,7 @@ from sqlalchemy import TIMESTAMP, Column, func
 from sqlalchemy.future import select
 from sqlalchemy.orm import declarative_base, scoped_session, sessionmaker
 
-from trozone_api.db.session import sync_engine
+from troczone_api.db.session import sync_engine
 
 Base = declarative_base()
 

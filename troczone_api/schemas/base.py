@@ -30,7 +30,7 @@ class Edge(Generic[GenericType]):
 class BaseSchema:
     @classmethod
     def from_model(cls, model):
-        values= {}
+        values = {}
         for k, v in cls.__annotations__.items():
             if not isinstance(v, StrawberryAnnotation):
                 if hasattr(model, k):

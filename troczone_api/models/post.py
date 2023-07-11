@@ -1,8 +1,18 @@
-from sqlalchemy import Column, Integer, ForeignKey, LargeBinary, JSON, String, TEXT, FLOAT, ARRAY
+from sqlalchemy import (
+    Column,
+    Integer,
+    ForeignKey,
+    LargeBinary,
+    JSON,
+    String,
+    TEXT,
+    FLOAT,
+    ARRAY,
+)
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import relationship
 
-from trozone_api.models.base import BaseTable, Base
+from troczone_api.models.base import BaseTable, Base
 
 
 class Post(BaseTable):
@@ -19,4 +29,3 @@ class Post(BaseTable):
 
     user = relationship("User", back_populates="posts")
     savedposts = relationship("UserSavedPost", back_populates="post")
-    

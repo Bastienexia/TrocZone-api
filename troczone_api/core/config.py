@@ -27,4 +27,6 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-redis = Redis(host=settings.REDIS_HOST, db=settings.REDIS_DB, password=settings.REDIS_PASSWORD)
+redis = Redis(
+    host=settings.REDIS_HOST, db=settings.REDIS_DB, password=settings.REDIS_PASSWORD
+)

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
-from trozone_api.models.base import BaseTable
+from troczone_api.models.base import BaseTable
 
 
 class Authentication(BaseTable):

@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, ForeignKey, String, Date, LargeBinary
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import relationship
 
-from trozone_api.models.base import BaseTable, Base
+from troczone_api.models.base import BaseTable, Base
 
 
 class User(BaseTable):

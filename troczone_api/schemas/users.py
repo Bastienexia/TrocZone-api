@@ -1,6 +1,6 @@
 import strawberry
 
-from trozone_api.schemas.base import BaseSchema
+from troczone_api.schemas.base import BaseSchema
 
 
 @strawberry.type

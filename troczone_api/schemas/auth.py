@@ -2,6 +2,7 @@ from fastapi import Form
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, EmailStr
 
+
 class OAuth2TokenForm(OAuth2PasswordRequestForm):
     def __init__(
         self,
@@ -11,7 +12,7 @@ class OAuth2TokenForm(OAuth2PasswordRequestForm):
         refresh_token: str | None = Form(default=None),
         scope: str = Form(default=""),
         client_id: str | None = Form(default=None),
-        client_secret: str | None = Form(default=None)
+        client_secret: str | None = Form(default=None),
     ):
         super().__init__(
             grant_type, username, password, scope, client_id, client_secret
@@ -49,4 +50,3 @@ class RefreshToken(BaseModel):
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    
