@@ -12,3 +12,8 @@ class User(BaseSchema):
     email: str
     phone_number: str | None
     profile_picture: str | None
+
+@strawberry.type
+class ChangePassword(BaseSchema):
+    old_password: str
+    new_password: str
